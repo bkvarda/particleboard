@@ -10,8 +10,8 @@ print_events = Config.get('Options','PrintEvents')
 batch_size = int(Config.get('Options','BatchSize'))
 batch_pause = int(Config.get('Options','BatchPause'))
 flume_http_source = Config.get('Options','FlumeHttpSource')
-
-uri = 'https://api.particle.io/v1/events?access_token=' + api_key
+particle_uri = Config.get('Particle','ParticleUri')
+uri = particle_uri + '?access_token=' + api_key
 count = 0
 
 #not sure if these headers are necessary even, but leaving
