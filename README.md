@@ -47,7 +47,7 @@ LOCATION '/user/cloudera/particle';
 ```
 Once the table is created, you should be ready to go. You can copy the flume.conf content to the Flume config in Cloudera Manager and then start or restart Flume, or you can run it interactively from the terminal like this:
 ```
-flume-ng agent --conf conf --conf-file flume_hive.conf --name a1 -Dflume.root.logger=INFO,console
+flume-ng agent --conf conf --conf-file flume.conf --name a1 -Dflume.root.logger=INFO,console
 ```
 Now in a separate terminal (or from another machine entirely), run the Python script that grabs events from Particle and POSTs them to the (running) Flume HTTP source. First you will need to make sure you have the SSEClient dependency:
 ```
