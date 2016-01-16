@@ -45,7 +45,7 @@ for msg in messages:
         if(print_events == 'enabled'):
             print(str(final_obj))
         
-        r = requests.post("http://quickstart.cloudera:5140", headers=headers,  data = final_obj) 
+        r = requests.post(flume_http_source, headers=headers,  data = final_obj) 
         count += 1
         
         #once configured batch is met, wait for configured time
